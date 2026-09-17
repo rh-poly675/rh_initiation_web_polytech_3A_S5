@@ -1,0 +1,130 @@
+/*
+@ author : Rémi HAEN
+@ date : 2024-06-05
+@ description : CSS TP2
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+
+header {
+    background-color: #555555;
+    color: white;
+    font-size: 2em;
+    line-height: 1.2em;
+    margin: 10px;
+    padding : 10px;
+}
+
+footer {
+    background-color: #555555;
+    color: white;
+    text-align: center;
+    margin: 5px;
+    padding : 10px;
+}
+
+section {
+    margin: 10px;
+}
+
+article {
+    margin: 10px;
+    padding : 10px;
+    border: 2px dashed #555555;
+}
+
+p {
+    margin: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #FF0000;
+    font-variant: small-caps;
+}
+
+h2 {
+    padding: 10px;
+    background-color: #FF0000;
+    border-left: 50px solid #000000;
+    text-transform: capitalize;
+}
+
+#info {
+    width: 600px;
+    background-color: #a52a2a;
+    color: white;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 2em;
+    padding: 10px;
+    margin: auto;
+}
+
+.documentation {
+    background-color: #008000;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+a {
+    background-color: #006400;
+    color: #86db21;
+    padding: 5px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #86db21;
+    color: #006400;
+}
+
+.code {
+    font : courier;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border : 1px solid #555555;
+    border-radius: 5px;
+}
+
+pre {
+    padding: 10px;
+    margin: 10px;
+}
+
+table {
+    width: 100%;
+    margin: auto;
+    line-height: 2em;
+    border-collapse: separate;
+}
+th {
+    background-color: #070070;
+    color: white;
+    line-height: 3em;
+}
+
+th, td {
+    border: 1px solid #555555;
+    padding: 10px;
+    text-align: center;
+}
+td {
+    background-color: #f0f0f0;
+    line-height: 2em;
+}
+
+tr:nth-child(even) td {
+    background-color: #add8e6;
+}
+
+tr:last-child td {
+    color: blue;
+}
