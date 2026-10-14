@@ -123,3 +123,26 @@ img {
 	margin-left: 0;
 	margin-right: auto;
 }
+
+#ampoule-on, #ampoule-off {
+	width: 20%;
+	height: auto;
+	display: block;
+}
+
+#h1-ampoule, #div-ampoule {
+	text-align: center;
+}
+
+#planets {
+	 width :145px;
+	 height :126px;
+	 margin-left: 0px; 
+}
+
+#planet-image {
+	 width :145px;
+	 height :126px;
+	 margin-left: 0px;
+	 display: none;
+}

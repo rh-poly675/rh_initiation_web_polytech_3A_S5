@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Exercices Javascript</title>
+    <meta charset="utf-8">
+    <script src="exercices.js"></script>
+    <link rel="stylesheet" href="tphtml.css">
+</head>
+
+<body>
+    <article>
+        <h1>Javascript events</h1>
+        <br>
+        <img id="planets" src="./images/planets.gif" alt="Planets" usemap="#planetmap" />
+        <img id="planet-image" src="" alt="Planets" />
+        <map name="planetmap">
+            <area shape="rect" coords="0,0,82,126"
+                onmouseover="writeText('The Sun and the gas giant planets like Jupiter are by far the largest objects in our Solar System.'), displayImage('images/sun.gif')"
+                onmouseout="resetView()"
+                href="images/sun.gif" target="_blank" alt="Sun" />
+            <area shape="circle" coords="90,58,3"
+                onmouseover="writeText('The planet Mercury is very difficult to study from the Earth because it is always so close to the Sun.'), displayImage('images/merglobe.gif')"
+                onmouseout="resetView()"
+                href="images/merglobe.gif" target="_blank" alt="Mercury" />
+
+            <area shape="circle" coords="124,58,8"
+                onmouseover="writeText('Until the 1960s, Venus was often considered a twin sister to the Earth because Venus is the nearest planet to us, and because the two planets seem to share many characteristics.'), displayImage('images/venglobe.gif')"
+                onmouseout="resetView()"
+                href="images/venglobe.gif" target="_blank" alt="Venus" />
+        </map>
+        <div id="desc">MOUSE over the sun and the planets and see differents descriptions</div>
+    </article>
+</body>
+
+</html>
