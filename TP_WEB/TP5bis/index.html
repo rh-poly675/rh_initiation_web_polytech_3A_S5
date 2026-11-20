@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP5Bis - HAEN Rémi - TODO List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="todolistapp" x-data="todoListApp()" x-init="init()" :class="{ dark: darkMode, dyslexia: dyslexia}">
+        <div class="container">
+            <h1>Ma liste de tâches</h1>
+            <h2>Préférences</h2>
+            <div class="preferences">
+                <button @click="toggleDarkMode()">
+                    <span x-text="darkMode ? '☀️ Mode clair' : '🌙 Mode sombre'">Mode sombre</span>
+                </button>
+                <button @click="toggleDyslexia()">
+                    📖 Lecture facilitée
+                </button>
+            </div>
+            <h2>Ajouter une tâche</h2>
+            <form class="add-form" @submit.prevent="addTask()">
+                <input type="text" x-model="newTask" placeholder="Nouvelle tâche...">
+                <button type="submit">Ajouter</button>
+            </form>
+            <h2>Statistiques</h2>
+            <div class="stats">
+                <p>Total : <strong x-text="tasks.length">0</strong></p>
+                <p>Terminées : <strong x-text="completedTasks">0</strong></p>
+                <p>Restantes : <strong x-text="remainingTasks">0</strong></p>
+            </div>
+            <h2>Mes tâches</h2>
+            <p x-show="tasks.length === 0">Aucune tâche pour le moment.</p>
+            <ul class="task-list" x-show="tasks.length > 0">
+                <template x-for="task in tasks" :key="task.id">
+                    <li class="task-item">
+                        <label class="task-label">
+                            <input type="checkbox" x-model="task.completed" @change="saveTasks()">
+                            <span x-text="task.text" :class="{ 'task-done': task.completed }"></span>
+                        </label>
+                        <button type="button" class="btn-delete" @click="deleteTask(task.id)">
+                            Supprimer
+                        </button>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
